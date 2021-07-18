@@ -1,1 +1,17 @@
-<h1>Daily Quote</h1>
+<h1>Random Quote Generator</h1>
+
+<form id="filterForm">
+  <label>Filter by: </label>
+  <select name="filterSelect" id="filterSelect">
+    <option disabled selected value></option>
+    <option value="bojackHorseman">Bojack Horseman</option>
+    <option value="familyGuy">Family Guy</option>
+    <option value="gameOfThrones">Game of Thrones</option>
+    <option value="michaelScott">Michael Scott</option>
+    <option value="rickAndMorty">Rick and Morty</option>
+  </select>
+  <input type="submit" value="Filter"/>
+</form>
+
+<div id="quoteContainer">
+</div>
