@@ -7,3 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+5.times do |i|
+  note = Note.create(title: "##{i+1} Note")
+  note.tags << Tag.create(name: "First tag")
+  note.tags << Tag.create(name: "Second tag")
+end
+

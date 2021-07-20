@@ -64,3 +64,216 @@ Migrating to CreateTagNotes (20210720145017)
   [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ? /* loading for inspect */ LIMIT ?[0m  [["note_id", 1], ["LIMIT", 11]]
   [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ? /* loading for inspect */ LIMIT ?[0m  [["note_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#0 Note"], ["created_at", "2021-07-20 15:02:28.026805"], ["updated_at", "2021-07-20 15:02:28.026805"]]
+  [1m[36mTRANSACTION (17.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#1 Note"], ["created_at", "2021-07-20 15:02:28.052830"], ["updated_at", "2021-07-20 15:02:28.052830"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#2 Note"], ["created_at", "2021-07-20 15:02:28.070945"], ["updated_at", "2021-07-20 15:02:28.070945"]]
+  [1m[36mTRANSACTION (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#3 Note"], ["created_at", "2021-07-20 15:02:28.089105"], ["updated_at", "2021-07-20 15:02:28.089105"]]
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#4 Note"], ["created_at", "2021-07-20 15:02:28.111135"], ["updated_at", "2021-07-20 15:02:28.111135"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.7ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#1 Note"], ["created_at", "2021-07-20 15:04:51.878471"], ["updated_at", "2021-07-20 15:04:51.878471"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.7ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "First tag"], ["created_at", "2021-07-20 15:04:51.938798"], ["updated_at", "2021-07-20 15:04:51.938798"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 7], ["tag_id", 2], ["created_at", "2021-07-20 15:04:52.004368"], ["updated_at", "2021-07-20 15:04:52.004368"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Second tag"], ["created_at", "2021-07-20 15:04:52.023990"], ["updated_at", "2021-07-20 15:04:52.023990"]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 7], ["tag_id", 3], ["created_at", "2021-07-20 15:04:52.043682"], ["updated_at", "2021-07-20 15:04:52.043682"]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#2 Note"], ["created_at", "2021-07-20 15:04:52.062886"], ["updated_at", "2021-07-20 15:04:52.062886"]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "First tag"], ["created_at", "2021-07-20 15:04:52.080820"], ["updated_at", "2021-07-20 15:04:52.080820"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 8], ["tag_id", 4], ["created_at", "2021-07-20 15:04:52.100582"], ["updated_at", "2021-07-20 15:04:52.100582"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Second tag"], ["created_at", "2021-07-20 15:04:52.129707"], ["updated_at", "2021-07-20 15:04:52.129707"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 8], ["tag_id", 5], ["created_at", "2021-07-20 15:04:52.159338"], ["updated_at", "2021-07-20 15:04:52.159338"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#3 Note"], ["created_at", "2021-07-20 15:04:52.185132"], ["updated_at", "2021-07-20 15:04:52.185132"]]
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "First tag"], ["created_at", "2021-07-20 15:04:52.212975"], ["updated_at", "2021-07-20 15:04:52.212975"]]
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 9], ["tag_id", 6], ["created_at", "2021-07-20 15:04:52.243604"], ["updated_at", "2021-07-20 15:04:52.243604"]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Second tag"], ["created_at", "2021-07-20 15:04:52.272246"], ["updated_at", "2021-07-20 15:04:52.272246"]]
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.7ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 9], ["tag_id", 7], ["created_at", "2021-07-20 15:04:52.302848"], ["updated_at", "2021-07-20 15:04:52.302848"]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#4 Note"], ["created_at", "2021-07-20 15:04:52.334026"], ["updated_at", "2021-07-20 15:04:52.334026"]]
+  [1m[36mTRANSACTION (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "First tag"], ["created_at", "2021-07-20 15:04:52.357983"], ["updated_at", "2021-07-20 15:04:52.357983"]]
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 10], ["tag_id", 8], ["created_at", "2021-07-20 15:04:52.385860"], ["updated_at", "2021-07-20 15:04:52.385860"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Second tag"], ["created_at", "2021-07-20 15:04:52.412940"], ["updated_at", "2021-07-20 15:04:52.412940"]]
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 10], ["tag_id", 9], ["created_at", "2021-07-20 15:04:52.448388"], ["updated_at", "2021-07-20 15:04:52.448388"]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.7ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#5 Note"], ["created_at", "2021-07-20 15:04:52.481255"], ["updated_at", "2021-07-20 15:04:52.481255"]]
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "First tag"], ["created_at", "2021-07-20 15:04:52.505158"], ["updated_at", "2021-07-20 15:04:52.505158"]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.8ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 11], ["tag_id", 10], ["created_at", "2021-07-20 15:04:52.527499"], ["updated_at", "2021-07-20 15:04:52.527499"]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Second tag"], ["created_at", "2021-07-20 15:04:52.549605"], ["updated_at", "2021-07-20 15:04:52.549605"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 11], ["tag_id", 11], ["created_at", "2021-07-20 15:04:52.572629"], ["updated_at", "2021-07-20 15:04:52.572629"]]
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ? /* loading for inspect */ LIMIT ?[0m  [["note_id", 11], ["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNotes (20210720144332)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210720144332"]]
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTags (20210720144350)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "tags" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210720144350"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTagNotes (20210720145017)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "tag_notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "note_id" integer, "tag_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210720145017"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-20 15:05:25.132489"], ["updated_at", "2021-07-20 15:05:25.132489"]]
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.8ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#1 Note"], ["created_at", "2021-07-20 15:05:31.656171"], ["updated_at", "2021-07-20 15:05:31.656171"]]
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "First tag"], ["created_at", "2021-07-20 15:05:31.720058"], ["updated_at", "2021-07-20 15:05:31.720058"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.5ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 1], ["tag_id", 1], ["created_at", "2021-07-20 15:05:31.757257"], ["updated_at", "2021-07-20 15:05:31.757257"]]
+  [1m[36mTRANSACTION (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Second tag"], ["created_at", "2021-07-20 15:05:31.774075"], ["updated_at", "2021-07-20 15:05:31.774075"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.5ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 1], ["tag_id", 2], ["created_at", "2021-07-20 15:05:31.794586"], ["updated_at", "2021-07-20 15:05:31.794586"]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#2 Note"], ["created_at", "2021-07-20 15:05:31.815834"], ["updated_at", "2021-07-20 15:05:31.815834"]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "First tag"], ["created_at", "2021-07-20 15:05:31.833180"], ["updated_at", "2021-07-20 15:05:31.833180"]]
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 2], ["tag_id", 3], ["created_at", "2021-07-20 15:05:31.852746"], ["updated_at", "2021-07-20 15:05:31.852746"]]
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.7ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Second tag"], ["created_at", "2021-07-20 15:05:31.871422"], ["updated_at", "2021-07-20 15:05:31.871422"]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 2], ["tag_id", 4], ["created_at", "2021-07-20 15:05:31.892181"], ["updated_at", "2021-07-20 15:05:31.892181"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.8ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#3 Note"], ["created_at", "2021-07-20 15:05:31.912991"], ["updated_at", "2021-07-20 15:05:31.912991"]]
+  [1m[36mTRANSACTION (25.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "First tag"], ["created_at", "2021-07-20 15:05:31.951784"], ["updated_at", "2021-07-20 15:05:31.951784"]]
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (1.1ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 3], ["tag_id", 5], ["created_at", "2021-07-20 15:05:31.981247"], ["updated_at", "2021-07-20 15:05:31.981247"]]
+  [1m[36mTRANSACTION (19.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (1.3ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Second tag"], ["created_at", "2021-07-20 15:05:32.017763"], ["updated_at", "2021-07-20 15:05:32.017763"]]
+  [1m[36mTRANSACTION (29.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.7ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 3], ["tag_id", 6], ["created_at", "2021-07-20 15:05:32.074393"], ["updated_at", "2021-07-20 15:05:32.074393"]]
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (0.9ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#4 Note"], ["created_at", "2021-07-20 15:05:32.103424"], ["updated_at", "2021-07-20 15:05:32.103424"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "First tag"], ["created_at", "2021-07-20 15:05:32.122569"], ["updated_at", "2021-07-20 15:05:32.122569"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.6ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 4], ["tag_id", 7], ["created_at", "2021-07-20 15:05:32.138674"], ["updated_at", "2021-07-20 15:05:32.138674"]]
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Second tag"], ["created_at", "2021-07-20 15:05:32.162585"], ["updated_at", "2021-07-20 15:05:32.162585"]]
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (0.5ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 4], ["tag_id", 8], ["created_at", "2021-07-20 15:05:32.194490"], ["updated_at", "2021-07-20 15:05:32.194490"]]
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Create (1.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "#5 Note"], ["created_at", "2021-07-20 15:05:32.217506"], ["updated_at", "2021-07-20 15:05:32.217506"]]
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "First tag"], ["created_at", "2021-07-20 15:05:32.249729"], ["updated_at", "2021-07-20 15:05:32.249729"]]
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (1.2ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 5], ["tag_id", 9], ["created_at", "2021-07-20 15:05:32.286526"], ["updated_at", "2021-07-20 15:05:32.286526"]]
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Create (0.8ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Second tag"], ["created_at", "2021-07-20 15:05:32.316941"], ["updated_at", "2021-07-20 15:05:32.316941"]]
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTagNote Create (1.2ms)[0m  [1m[32mINSERT INTO "tag_notes" ("note_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["note_id", 5], ["tag_id", 10], ["created_at", "2021-07-20 15:05:32.367640"], ["updated_at", "2021-07-20 15:05:32.367640"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
