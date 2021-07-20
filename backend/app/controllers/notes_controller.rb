@@ -8,7 +8,7 @@ class NotesController < ApplicationController
 
   end
 
-  def delete
+  def destroy
 
   end
 
