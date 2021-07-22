@@ -1,4 +1,5 @@
 const baseUrl = 'http://localhost:3000';
+
 const getAllNotes = () => {
   return fetch(`${baseUrl}/notes`)
     .then( resp => resp.json() )
