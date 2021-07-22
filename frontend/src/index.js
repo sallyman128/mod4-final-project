@@ -1,16 +1,15 @@
-class Note {
-  // const baseUrl = 'http://localhost/3000';
+const baseUrl = 'http://localhost/3000';
 
-  constructor(title, body) {
-    this.title = title;
-    this.body = body;
-  }
+const getAllNotes = () => {
+  return fetch(`${baseUrl}/notes`)
+    .then( resp => resp.json() )
+    .then( notes => renderNotes(notes) )
+}
 
-  static all() {
-    return fetch(`http://localhost:3000/notes`)
-      .then( resp => resp.json() )
-      .then( result => result )
-  }
+const renderNotes = (notes) => {
+  notes.forEach( (note) => {
+    const {title, body} = note
+  })
 }
 
 // DONE add the appropirate HTML meta tags that will allow link to js source code and eventual css
