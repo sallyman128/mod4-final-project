@@ -2,7 +2,7 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.all
-    render :json => @notes
+    render :json => @notes, only: [:title, :body]
   end
 
   def create

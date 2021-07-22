@@ -530,3 +530,12 @@ Started GET "/favicon.ico" for ::1 at 2021-07-22 13:23:48 -0400
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   
+Started GET "/notes" for ::1 at 2021-07-22 13:35:07 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 5.2ms | ActiveRecord: 0.7ms | Allocations: 8258)
+
+
