@@ -812,3 +812,201 @@ Processing by NotesController#index as HTML
 Completed 200 OK in 76ms (Views: 42.8ms | ActiveRecord: 4.8ms | Allocations: 21035)
 
 
+Started GET "/notes" for ::1 at 2021-07-22 15:33:20 -0400
+Processing by NotesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 50ms (Views: 41.8ms | ActiveRecord: 1.4ms | Allocations: 13863)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 15:33:42 -0400
+  
+SyntaxError (/home/sallyman128/Development/code/phase_4/mod4-final-project/backend/app/controllers/notes_controller.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+...le, :body], include: :tags only: [:id, :name]
+...                           ^~~~):
+  
+app/controllers/notes_controller.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/notes_controller.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/notes" for ::1 at 2021-07-22 15:45:14 -0400
+Processing by NotesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 25.2ms | ActiveRecord: 2.4ms | Allocations: 15273)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 15:46:08 -0400
+  
+SyntaxError (/home/sallyman128/Development/code/phase_4/mod4-final-project/backend/app/controllers/notes_controller.rb:5: syntax error, unexpected tIDENTIFIER, expecting ']'
+...e, :body], include: [:tags only: [:id, :name]]
+...                           ^~~~
+/home/sallyman128/Development/code/phase_4/mod4-final-project/backend/app/controllers/notes_controller.rb:5: syntax error, unexpected ']', expecting end
+...ude: [:tags only: [:id, :name]]
+...                              ^
+/home/sallyman128/Development/code/phase_4/mod4-final-project/backend/app/controllers/notes_controller.rb:21: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/notes_controller.rb:5: syntax error, unexpected tIDENTIFIER, expecting ']'
+app/controllers/notes_controller.rb:5: syntax error, unexpected ']', expecting end
+app/controllers/notes_controller.rb:21: syntax error, unexpected end-of-input, expecting end
+app/controllers/notes_controller.rb:5: syntax error, unexpected tIDENTIFIER, expecting ']'
+app/controllers/notes_controller.rb:5: syntax error, unexpected ']', expecting end
+app/controllers/notes_controller.rb:21: syntax error, unexpected end-of-input, expecting end
+Started GET "/notes" for ::1 at 2021-07-22 15:46:24 -0400
+Processing by NotesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 604ms (ActiveRecord: 10.7ms | Allocations: 13475)
+
+
+  
+NoMethodError (undefined method `only' for #<Note:0x00007fbec18baf10>):
+  
+app/controllers/notes_controller.rb:5:in `index'
+Started GET "/notes" for ::1 at 2021-07-22 15:46:50 -0400
+Processing by NotesController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2023)
+
+
+  
+NoMethodError (undefined method `id' for :tags:Symbol):
+  
+app/controllers/notes_controller.rb:5:in `index'
+Started GET "/notes" for ::1 at 2021-07-22 15:47:00 -0400
+Processing by NotesController#index as HTML
+Completed 500 Internal Server Error in 10ms (Allocations: 2947)
+
+
+  
+NameError (undefined local variable or method `tags' for #<NotesController:0x005575d56e8c78>):
+  
+app/controllers/notes_controller.rb:5:in `index'
+Started GET "/notes" for ::1 at 2021-07-22 15:47:12 -0400
+Processing by NotesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 3.0ms | Allocations: 14951)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 15:53:05 -0400
+Processing by NotesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 13408)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 15:53:48 -0400
+Processing by NotesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 38ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 14211)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 15:55:00 -0400
+Processing by NotesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 69ms (Views: 0.1ms | ActiveRecord: 3.6ms | Allocations: 14347)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 15:55:35 -0400
+Processing by NotesController#index as HTML
+Completed 200 OK in 3ms (Views: 0.1ms | Allocations: 1503)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 15:55:47 -0400
+Processing by NotesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:9:in `index'
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:9:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:9:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:9:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:9:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:9:in `index'
+Completed 200 OK in 53ms (Views: 48.1ms | ActiveRecord: 4.0ms | Allocations: 14664)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 15:56:46 -0400
+Processing by NotesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 2.7ms | Allocations: 14653)
+
+

@@ -1,8 +1,8 @@
 class NotesController < ApplicationController
 
   def index
-    @notes = Note.all
-    render :json => @notes, only: [:id, :title, :body], include: :tags
+    notes = Note.all
+    render json: notes, only: [:id, :title, :body], include: {tags: {only: [:id, :name]}}
   end
 
   def create
