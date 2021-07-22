@@ -11,12 +11,12 @@ const renderNotes = (notes) => {
     const notesContainerDiv = document.getElementById("notesContainer");
     notesContainerDiv.innerHTML = "<h2>Published Notes</h2>"
     notes.forEach( (note) => {
-      const {title, body} = note;
+      const {id, title, body} = note;
       const template = `
         <h3>Title: ${title}</h3>
         <div class="noteBody">
           <p>${body}</p>
-          <button>Delete</button>
+          <button id=${id}>Delete</button>
         </div>
       `;
       notesContainerDiv.innerHTML += template;
