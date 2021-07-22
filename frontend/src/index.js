@@ -12,7 +12,7 @@ const renderNotes = (notes) => {
     notesContainerDiv.innerHTML = "<h2>Published Notes</h2>"
     notes.forEach( (note) => {
       const {id, title, body, tags} = note;
-      const noteBody = `
+      let bodyTemplate = `
         <h3>Title: ${title}</h3>
         <div class="publishedNoteBody">
           <p>${body}</p>
@@ -20,9 +20,15 @@ const renderNotes = (notes) => {
         </div>
       `;
       tags.forEach( (tag) => {
-        const {tagId, tagName} = tag["name"]
+        const {tagId, tagName} = tag;
+        let tagTemplate = `
+          <li>${tagName}</li>
+          <button id=${tagId}>X</button>
+        `;
+        debugger;
+        bodyTemplate.innerHTML += tagTemplate;
       })
-      notesContainerDiv.innerHTML += noteBody;
+      notesContainerDiv.innerHTML += bodyTemplate;
     }) 
   }
 }
