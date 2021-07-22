@@ -688,3 +688,94 @@ Processing by NotesController#index as */*
 Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 929)
 
 
+Started GET "/notes" for ::1 at 2021-07-22 14:41:12 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 929)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:42:57 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 929)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:43:20 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 929)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:43:45 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 929)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:44:08 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 929)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:44:21 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 929)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:45:12 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 929)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:47:34 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.2ms | Allocations: 929)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:49:59 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 929)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:51:40 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (221.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 3460ms (Views: 2872.4ms | ActiveRecord: 221.7ms | Allocations: 934)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:52:38 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 59ms (Views: 40.0ms | ActiveRecord: 0.2ms | Allocations: 929)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:53:22 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (2.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 413ms (Views: 409.3ms | ActiveRecord: 2.3ms | Allocations: 932)
+
+
+Started GET "/notes" for ::1 at 2021-07-22 14:55:37 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 2520ms (Views: 2519.1ms | ActiveRecord: 0.2ms | Allocations: 931)
+
+

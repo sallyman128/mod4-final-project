@@ -1,6 +1,4 @@
 const baseUrl = 'http://localhost:3000';
-const notesContainerDiv = document.getElementById("notesContainer");
-
 const getAllNotes = () => {
   return fetch(`${baseUrl}/notes`)
     .then( resp => resp.json() )
@@ -8,16 +6,21 @@ const getAllNotes = () => {
 }
 
 const renderNotes = (notes) => {
-  notes.forEach( (note) => {
-    const {title, body} = note;
-    const template = `
-      <p>
-        <h2>Title: ${title}</h2>
-        <li>${body}</li>
-      </p>
-    `;
-    console.log(notesContainerDiv);
-  })
+  if (notes.length > 0) {
+    const notesContainerDiv = document.getElementById("notesContainer");
+    notesContainerDiv.innerHTML = "<h2>Published Notes</h2>"
+    notes.forEach( (note) => {
+      const {title, body} = note;
+      const template = `
+        <h3>Title: ${title}</h3>
+        <div class="noteBody">
+          <p>${body}</p>
+          <button>Delete</button>
+        </div>
+      `;
+      notesContainerDiv.innerHTML += template;
+    }) 
+  }
 }
 
 document.addEventListener("DOMContentLoaded", getAllNotes)
