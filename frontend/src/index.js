@@ -59,12 +59,8 @@ const postNewNoteAndTag = (event) => {
       }
     }
   }
-  // post Note
   postNewNote(jsonToSend)
-  
-
-  // post the Tag
-  // postNewTag
+  // rails wont create a new record of this note... Why?
 }
 
 const postNewNote = (data) => {
