@@ -6,7 +6,7 @@ class NotesController < ApplicationController
   end
 
   def create
-
+    byebug
   end
 
   def destroy
@@ -14,8 +14,8 @@ class NotesController < ApplicationController
   end
 
   private
-  # def note_params(params)
-  #   params.require(note).permit()
-  # end
+  def note_params
+    params.require(:note).permit(:title, :body, :tags => {})
+  end
 
 end

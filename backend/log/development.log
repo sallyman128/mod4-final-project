@@ -1605,3 +1605,138 @@ Processing by NotesController#index as */*
 Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 11.8ms | Allocations: 5838)
 
 
+Started GET "/notes" for ::1 at 2021-07-23 00:54:53 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 106ms (Views: 82.5ms | ActiveRecord: 7.0ms | Allocations: 20758)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 00:55:11 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"note title", "body"=>"note body", "tag"=>"a new tag"}}
+Completed 500 Internal Server Error in 130800ms (ActiveRecord: 0.0ms | Allocations: 142754)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/notes_controller.rb:10:in `create'
+Started POST "/notes" for ::1 at 2021-07-23 00:57:51 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"note title", "body"=>"note body", "tag"=>"a new tag"}}
+[31mUnpermitted parameter: :tag[0m
+Completed 500 Internal Server Error in 19750ms (ActiveRecord: 0.0ms | Allocations: 52158)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/notes_controller.rb:10:in `create'
+Started GET "/notes" for ::1 at 2021-07-23 00:58:12 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (14.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 3222ms (Views: 1271.4ms | ActiveRecord: 1932.7ms | Allocations: 3204199)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 00:58:19 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"a new body", "tags"=>"a new tag"}}
+Completed 500 Internal Server Error in 45723ms (ActiveRecord: 0.0ms | Allocations: 37380)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/notes_controller.rb:10:in `create'
+Started GET "/notes" for ::1 at 2021-07-23 00:59:52 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (8.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (9.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 3637ms (Views: 3593.9ms | ActiveRecord: 23.8ms | Allocations: 2150781)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 01:00:01 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"", "body"=>"", "tags"=>{"title"=>""}}}
+Completed 500 Internal Server Error in 3342ms (ActiveRecord: 0.0ms | Allocations: 34280)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/notes_controller.rb:10:in `create'
+Started POST "/notes" for ::1 at 2021-07-23 01:00:11 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"a new body", "tags"=>{"title"=>"a new tag"}}}
+[31mUnpermitted parameter: :tags[0m
+Started GET "/notes" for ::1 at 2021-07-23 01:00:59 -0400
+Completed 500 Internal Server Error in 48270ms (ActiveRecord: 0.0ms | Allocations: 379865)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/notes_controller.rb:10:in `create'
+Processing by NotesController#index as */*
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (8.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (12.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 2584ms (Views: 2392.8ms | ActiveRecord: 159.4ms | Allocations: 3843723)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 01:01:24 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"a new body", "tags"=>{"title"=>"a new tag"}}}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/notes_controller.rb:10:in `create'
