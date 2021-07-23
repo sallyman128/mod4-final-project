@@ -11,7 +11,8 @@ class NotesController < ApplicationController
   end
 
   def destroy
-
+    note = Note.find_by_id(params[:id])
+    note.destroy
   end
 
   private

@@ -17,18 +17,21 @@ const renderNotes = (notes) => {
     notes.forEach( (note) => {
       const {id, title, body, tags} = note;
       let bodyTemplate = `
-        <h3>
-          Title: ${title} 
-          <button id=${id} class="noteDeleteButton">Delete Note</button>
-          <button id=${id} class="tagsAddButton">Add a tag</button>
-        </h3>
-        <div class="publishedNoteBody">
-          <p>${body}</p>
+        <div id=note${id}>
+          <h3>
+            Title: ${title} 
+            <button id=${id} class="noteDeleteButton">Delete Note</button>
+            <button id=${id} class="tagsAddButton">Add a tag</button>
+          </h3>
+          <span class="publishedNoteBody">
+            <p>${body}</p>
+          </span>
         </div>
       `;
 
       notesContainerDiv.innerHTML += bodyTemplate;
-
+      
+      const thisNoteDiv = document.getElementById(`note${id}`)
 
       tags.forEach( (tag) => {
         let tagTemplate = `
@@ -36,7 +39,7 @@ const renderNotes = (notes) => {
             ${tag.name}
           </p>
         `;
-        notesContainerDiv.innerHTML += tagTemplate;
+        thisNoteDiv.innerHTML += tagTemplate;
       })
  
     }) 
@@ -86,13 +89,15 @@ const postNewNote = (data) => {
 // after the note has been persisted. It will be appended to the DOM.
 const renderNewNote = (json) => {
   template = `
-  <h3>
-    Title: ${json.title} 
-    <button id=${json.id} class="noteDeleteButton">Delete Note</button>
-    <button id=${json.id} class="tagsAddButton">Add a tag</button>
-  </h3>
-  <div class="publishedNoteBody">
-    <p>${json.body}</p>
+  <div>
+    <h3>
+      Title: ${json.title} 
+      <button id=${json.id} class="noteDeleteButton">Delete Note</button>
+      <button id=${json.id} class="tagsAddButton">Add a tag</button>
+    </h3>
+    <span class="publishedNoteBody">
+      <p>${json.body}</p>
+    </span>
   </div>
   `;
   notesContainerDiv.innerHTML += template;
@@ -107,8 +112,24 @@ newNoteForm.addEventListener("submit", submitNewNote)
 const deleteNote = (event) => {
   if (event.target.className === "noteDeleteButton") {
     const note_id = event.target.id;
+    const configObj = {
+      method: "DELETE",
+      mode: "cors",
+      headers: {
+        'Content-Type': "application/json"
+      },
+    }
+    fetch(`${baseUrl}/notes/${note_id}`, configObj)
+      // .then( resp => console.log(resp) )
+      .catch( error => console.log("Error:", error) )
     
+    // remove the deleted note from the DOM
+    // debugger;
+    const note = document.getElement
+    event.target.remove()
+    // removeElement(event.target)
   }
+
 }
 
 document.addEventListener("click", deleteNote)
