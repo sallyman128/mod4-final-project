@@ -103,7 +103,12 @@ newNoteForm.addEventListener("submit", submitNewNote)
 
 
 /****************Delete an existing Note***************************/
-const anyNoteDeleteButton = document.getElementsByClassName("")
+const deleteNote = (event) => {
+  console.log(event)
+}
+
+const anyNoteDeleteButton = document.getElementsByClassName("noteDeleteButton")
+anyNoteDeleteButton.addEventListener("click", deleteNote)
 
 /****************Delete an existing associated Tag*****************/
 
