@@ -13,7 +13,6 @@ const getAllNotes = () => {
 
 const renderNotes = (notes) => {
   if (notes.length > 0) {
-    // const notesContainerDiv = document.getElementById("notesContainer");
     notesContainerDiv.innerHTML = "<h2>Published Notes</h2>"
     notes.forEach( (note) => {
       const {id, title, body, tags} = note;
@@ -29,6 +28,7 @@ const renderNotes = (notes) => {
       `;
 
       notesContainerDiv.innerHTML += bodyTemplate;
+
 
       tags.forEach( (tag) => {
         let tagTemplate = `
@@ -103,12 +103,15 @@ newNoteForm.addEventListener("submit", submitNewNote)
 
 
 /****************Delete an existing Note***************************/
+
 const deleteNote = (event) => {
-  console.log(event)
+  if (event.target.className === "noteDeleteButton") {
+    const note_id = event.target.id;
+    
+  }
 }
 
-const anyNoteDeleteButton = document.getElementsByClassName("noteDeleteButton")
-anyNoteDeleteButton.addEventListener("click", deleteNote)
+document.addEventListener("click", deleteNote)
 
 /****************Delete an existing associated Tag*****************/
 
