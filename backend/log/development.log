@@ -2053,3 +2053,861 @@ Processing by NotesController#index as */*
 Completed 200 OK in 1235ms (Views: 1180.9ms | ActiveRecord: 50.8ms | Allocations: 7471773)
 
 
+Started GET "/notes" for ::1 at 2021-07-23 07:19:31 -0400
+Processing by NotesController#index as */*
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (10.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1139ms (Views: 1064.2ms | ActiveRecord: 43.4ms | Allocations: 8353456)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:22:46 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (14.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (7.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1558ms (Views: 1509.2ms | ActiveRecord: 44.9ms | Allocations: 5807638)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:23:41 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (1.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (18.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1758ms (Views: 1697.5ms | ActiveRecord: 48.5ms | Allocations: 5805021)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:23:50 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"my fav note"}}
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (1.4ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a new title"], ["body", "my fav note"], ["created_at", "2021-07-23 11:23:50.290635"], ["updated_at", "2021-07-23 11:23:50.290635"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 204 No Content in 219ms (ActiveRecord: 27.7ms | Allocations: 1184849)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:24:10 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (2.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (9.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1503ms (Views: 1461.3ms | ActiveRecord: 31.6ms | Allocations: 6243206)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:25:31 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (6.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (9.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (8.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1314ms (Views: 1262.5ms | ActiveRecord: 48.0ms | Allocations: 6243976)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:25:46 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"fda", "body"=>"add"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (1.9ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "fda"], ["body", "add"], ["created_at", "2021-07-23 11:25:46.621989"], ["updated_at", "2021-07-23 11:25:46.621989"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 204 No Content in 141ms (ActiveRecord: 9.8ms | Allocations: 949839)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:25:51 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (2.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1589ms (Views: 1544.9ms | ActiveRecord: 38.5ms | Allocations: 6682862)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:28:39 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (9.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (8.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1410ms (Views: 1351.4ms | ActiveRecord: 55.0ms | Allocations: 6682746)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:29:17 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (16.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (8.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (8.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1282ms (Views: 1209.2ms | ActiveRecord: 63.1ms | Allocations: 6687883)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:29:24 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"fdafdad"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (1.9ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a new title"], ["body", "fdafdad"], ["created_at", "2021-07-23 11:29:24.762584"], ["updated_at", "2021-07-23 11:29:24.762584"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 204 No Content in 175ms (ActiveRecord: 12.6ms | Allocations: 1164186)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:33:53 -0400
+Processing by NotesController#index as */*
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (6.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 16]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1536ms (Views: 1467.6ms | ActiveRecord: 86.1ms | Allocations: 10252110)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:33:59 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"with a body"}}
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (2.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a new title"], ["body", "with a body"], ["created_at", "2021-07-23 11:33:59.790174"], ["updated_at", "2021-07-23 11:33:59.790174"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 185ms (Views: 9.2ms | ActiveRecord: 15.0ms | Allocations: 1120903)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:50:16 -0400
+Processing by NotesController#index as */*
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (17.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (7.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 16]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 17]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1844ms (Views: 1838.4ms | ActiveRecord: 68.1ms | Allocations: 7764531)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:50:23 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"fdafda"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (4.0ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a new title"], ["body", "fdafda"], ["created_at", "2021-07-23 11:50:23.407139"], ["updated_at", "2021-07-23 11:50:23.407139"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 292ms (Views: 11.6ms | ActiveRecord: 13.8ms | Allocations: 1181746)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:50:55 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"fdafda"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (7.5ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a new title"], ["body", "fdafda"], ["created_at", "2021-07-23 11:50:55.071765"], ["updated_at", "2021-07-23 11:50:55.071765"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (20.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 184ms (Views: 7.9ms | ActiveRecord: 28.4ms | Allocations: 1100523)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:50:58 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (3.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (18.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (9.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 16]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 17]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 18]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 19]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1778ms (Views: 1707.3ms | ActiveRecord: 62.4ms | Allocations: 8428109)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:51:03 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"fdafdadd"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (2.0ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a new title"], ["body", "fdafdadd"], ["created_at", "2021-07-23 11:51:03.681819"], ["updated_at", "2021-07-23 11:51:03.681819"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 169ms (Views: 11.3ms | ActiveRecord: 14.5ms | Allocations: 1096259)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:51:42 -0400
+  
+SyntaxError (/home/sallyman128/Development/code/phase_4/mod4-final-project/backend/app/controllers/notes_controller.rb:10: syntax error, unexpected [, expecting do or '{' or '('
+    render json: note, only [:id, :title, :body]
+                            ^):
+  
+app/controllers/notes_controller.rb:10: syntax error, unexpected [, expecting do or '{' or '('
+app/controllers/notes_controller.rb:10: syntax error, unexpected [, expecting do or '{' or '('
+Started GET "/notes" for ::1 at 2021-07-23 07:52:07 -0400
+Processing by NotesController#index as */*
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (4.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 16]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 17]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 18]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 19]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 20]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1853ms (Views: 1791.5ms | ActiveRecord: 110.3ms | Allocations: 11991150)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:52:14 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"fdafdafddd"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (1.7ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a new title"], ["body", "fdafdafddd"], ["created_at", "2021-07-23 11:52:14.104038"], ["updated_at", "2021-07-23 11:52:14.104038"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 147ms (Views: 8.9ms | ActiveRecord: 14.9ms | Allocations: 1020922)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:53:50 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (2.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (7.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 16]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 17]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 18]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 19]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 20]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 21]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 1933ms (Views: 1863.9ms | ActiveRecord: 54.9ms | Allocations: 9297341)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:53:58 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a few==resh new title", "body"=>"a fresh new note"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (2.0ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a few==resh new title"], ["body", "a fresh new note"], ["created_at", "2021-07-23 11:53:58.579989"], ["updated_at", "2021-07-23 11:53:58.579989"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (21.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 275ms (Views: 5.3ms | ActiveRecord: 24.3ms | Allocations: 1128397)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:54:00 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a few==resh new title", "body"=>"a fresh new note"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (10.3ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a few==resh new title"], ["body", "a fresh new note"], ["created_at", "2021-07-23 11:54:00.515527"], ["updated_at", "2021-07-23 11:54:00.515527"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 236ms (Views: 7.8ms | ActiveRecord: 21.1ms | Allocations: 1288766)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:54:05 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a few==resh new title", "body"=>"a fresh new note"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (2.0ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a few==resh new title"], ["body", "a fresh new note"], ["created_at", "2021-07-23 11:54:05.506990"], ["updated_at", "2021-07-23 11:54:05.506990"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 215ms (Views: 8.5ms | ActiveRecord: 11.6ms | Allocations: 1222318)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:54:08 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a fewresh new title", "body"=>"a fresh new note"}}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (6.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a fewresh new title"], ["body", "a fresh new note"], ["created_at", "2021-07-23 11:54:08.710668"], ["updated_at", "2021-07-23 11:54:08.710668"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (21.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 230ms (Views: 12.0ms | ActiveRecord: 28.3ms | Allocations: 1228352)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:54:51 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (5.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (10.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (9.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (7.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 16]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 17]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 18]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 19]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 20]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 21]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 22]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 23]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (8.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 24]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 25]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 2436ms (Views: 2348.7ms | ActiveRecord: 82.7ms | Allocations: 11047042)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:54:55 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"fdafdadd"}}
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (2.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a new title"], ["body", "fdafdadd"], ["created_at", "2021-07-23 11:54:55.933541"], ["updated_at", "2021-07-23 11:54:55.933541"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 179ms (Views: 7.4ms | ActiveRecord: 11.8ms | Allocations: 1231628)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:55:01 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"a new title", "body"=>"fdafdadd"}}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (5.9ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a new title"], ["body", "fdafdadd"], ["created_at", "2021-07-23 11:55:01.492490"], ["updated_at", "2021-07-23 11:55:01.492490"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 194ms (Views: 6.2ms | ActiveRecord: 15.0ms | Allocations: 1211081)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:56:29 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (2.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (12.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (8.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 16]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 17]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 18]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 19]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 20]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 21]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 22]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 23]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 24]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 25]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 26]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 27]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 2332ms (Views: 2247.8ms | ActiveRecord: 81.4ms | Allocations: 11918811)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:56:33 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"adfdaddd", "body"=>"fdafddddd"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (5.8ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "adfdaddd"], ["body", "fdafddddd"], ["created_at", "2021-07-23 11:56:33.315417"], ["updated_at", "2021-07-23 11:56:33.315417"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 234ms (Views: 6.2ms | ActiveRecord: 14.7ms | Allocations: 1259487)
+
+
+Started GET "/notes" for ::1 at 2021-07-23 07:58:12 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (2.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (8.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (8.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 6]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 7]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 8]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 9]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 10]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (3.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 11]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 12]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 13]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (6.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 14]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 15]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 16]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 17]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 18]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 19]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 20]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 21]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (5.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 22]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 23]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 24]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 25]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 26]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (4.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 27]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tag_notes" ON "tags"."id" = "tag_notes"."tag_id" WHERE "tag_notes"."note_id" = ?[0m  [["note_id", 28]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 2165ms (Views: 2057.1ms | ActiveRecord: 92.0ms | Allocations: 12355074)
+
+
+Started POST "/notes" for ::1 at 2021-07-23 07:58:20 -0400
+Processing by NotesController#create as */*
+  Parameters: {"note"=>{"title"=>"woohooo", "body"=>"woohooo"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mNote Create (1.5ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "woohooo"], ["body", "woohooo"], ["created_at", "2021-07-23 11:58:20.417748"], ["updated_at", "2021-07-23 11:58:20.417748"]]
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:9:in `create'
+Completed 200 OK in 176ms (Views: 9.6ms | ActiveRecord: 9.9ms | Allocations: 1228510)
+
+
