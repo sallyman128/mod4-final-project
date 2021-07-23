@@ -48,15 +48,15 @@ const postNewNoteAndTag = (event) => {
   event.preventDefault();
   const newNoteTitle = document.querySelector("#newNoteTitle").value;
   const newNoteBody = document.querySelector("#newNoteBody").value;
-  const newNoteTag = document.querySelector("#newNoteTag").value;
+  // const newNoteTag = document.querySelector("#newNoteTag").value;
 
   const jsonToSend = {
     note: {
       title: newNoteTitle,
       body: newNoteBody,
-      tags: {
-        title: newNoteTag
-      }
+      // tags: {
+      //   name: newNoteTag
+      // }
     }
   }
   postNewNote(jsonToSend)
