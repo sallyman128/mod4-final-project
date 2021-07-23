@@ -1,3 +1,8 @@
 div.publishedNoteBody {
   text-indent: 50px;
 }
+
+.publishedTag {
+  text-indent: 50px;
+  color: blue
+}
