@@ -124,10 +124,8 @@ const deleteNote = (event) => {
       .catch( error => console.log("Error:", error) )
     
     // remove the deleted note from the DOM
-    // debugger;
-    const note = document.getElement
-    event.target.remove()
-    // removeElement(event.target)
+    const noteElement = event.target.parentElement.parentElement
+    noteElement.remove()
   }
 
 }
