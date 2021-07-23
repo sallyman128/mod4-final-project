@@ -15,7 +15,10 @@ const renderNotes = (notes) => {
     notes.forEach( (note) => {
       const {id, title, body, tags} = note;
       let bodyTemplate = `
-        <h3>Title: ${title} <button id=${id}>Delete Note</button></h3>
+        <h3>
+          Title: ${title} 
+          <button id=${id}>Delete Note</button>
+        </h3>
         <div class="publishedNoteBody">
           <p>${body}</p>
         </div>
@@ -42,17 +45,21 @@ document.addEventListener("DOMContentLoaded", getAllNotes)
 
 const postNewNote = (event) => {
   event.preventDefault();
+  const newNoteTitle = document.querySelector("#newNoteTitle").value;
+  const newNoteBody = document.querySelector("#newNoteBody").value;
+  const newNoteTag = document.querySelector("#newNoteTag").value;
+
+  
+
 }
 
-const newNoteForm = document.querySelector("#newNoteForm")
+const newNoteForm = document.getElementById("newNoteForm");
+
 newNoteForm.addEventListener("submit", postNewNote)
 
-// const postNewNote = (event) => {
-//   event.preventDefault();
-// }
 
-// DONE add the appropirate HTML meta tags that will allow link to js source code and eventual css
-// first get a js class working that can retrieve data from the rails api
-// then once that it working, display that info to the DOM
-// then build form to add to that list
-// then build delete functionality
+/****************Delete an existing Note***************************/
+
+/****************Delete an existing associated Tag*****************/
+
+
