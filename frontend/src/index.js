@@ -20,7 +20,8 @@ const renderNotes = (notes) => {
       let bodyTemplate = `
         <h3>
           Title: ${title} 
-          <button id=${id}>Delete Note</button>
+          <button id=${id} class="noteDeleteButton">Delete Note</button>
+          <button id=${id} class="tagsAddButton">Add a tag</button>
         </h3>
         <div class="publishedNoteBody">
           <p>${body}</p>
@@ -87,7 +88,8 @@ const renderNewNote = (json) => {
   template = `
   <h3>
     Title: ${json.title} 
-    <button id=${json.id}>Delete Note</button>
+    <button id=${json.id} class="noteDeleteButton">Delete Note</button>
+    <button id=${json.id} class="tagsAddButton">Add a tag</button>
   </h3>
   <div class="publishedNoteBody">
     <p>${json.body}</p>
@@ -101,6 +103,7 @@ newNoteForm.addEventListener("submit", submitNewNote)
 
 
 /****************Delete an existing Note***************************/
+const anyNoteDeleteButton = document.getElementsByClassName("")
 
 /****************Delete an existing associated Tag*****************/
 
