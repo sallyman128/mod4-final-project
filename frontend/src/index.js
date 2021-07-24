@@ -13,7 +13,7 @@ const getAllNotes = () => {
 
 const renderNotes = (notes) => {
   if (notes.length > 0) {
-    notesContainerDiv.innerHTML = "<h2>Published Notes</h2>"
+    notesContainerDiv.innerHTML = "<h2>Published Notes</h2><i>Double click a tag to remove it.</i>"
     notes.forEach( (note) => {
       const {id, title, body, tags} = note;
       let bodyTemplate = `
@@ -120,7 +120,6 @@ const deleteNote = (event) => {
       },
     }
     fetch(`${baseUrl}/notes/${note_id}`, configObj)
-      // .then( resp => console.log(resp) )
       .catch( error => console.log("Error:", error) )
     
     // remove the deleted note from the DOM
@@ -133,6 +132,26 @@ const deleteNote = (event) => {
 document.addEventListener("click", deleteNote)
 
 /****************Delete an existing associated Tag*****************/
+
+const deleteTag = (event) => {
+  if (event.target.className === "publishedTag") {
+    const tagElement = event.target
+    const tag_id = tagElement.id;
+    const configObj = {
+      method: "DELETE",
+      mode: "cors",
+      headers: {
+        'Content-Type': "application/json"
+      },
+    }
+    fetch(`${baseUrl}/tags/${tag_id}`, configObj)
+      .catch( error => console.log("Error:", error) )
+    
+    // remove the deleted note from the DOM
+    tagElement.remove()
+  }
+}
+document.addEventListener("dblclick", deleteTag)
 
 /****************Add a Tag to an existing Note********************/
 
