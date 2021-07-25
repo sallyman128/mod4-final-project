@@ -169,7 +169,8 @@ const addNewTagField = (event) => {
 
 const submitNewTag = (event) => {
   if (event.target.id === "submitTag") {
-    const thisNoteId = event.target.parentElement.parentElement.id
+    const thisNoteDivId = event.target.parentElement.parentElement.id;
+    const thisNoteId = thisNoteDivId.split("").slice(4).join("");
     const newTagName = document.getElementById("newTagName").value
     const jsonToSend = {
       tag: {
@@ -177,6 +178,13 @@ const submitNewTag = (event) => {
         note_id: thisNoteId
       }
     };
+
+    document.getElementById("newTagName").remove()
+    document.getElementById("submitTag").remove()
+    document.getElementById("cancelSubmitTag").remove()
+
+    document.addEventListener("click", addNewTagField)
+
     postNewTag(jsonToSend);
   }
 }
@@ -192,12 +200,23 @@ const postNewTag = (data) => {
   }
   return fetch(`${baseUrl}/tags`, configObj)
     .then( resp => resp.json() )
-    .then( (json) => console.log(json) )
+    .then( (json) => renderNewTag(json) )
     .catch( error => console.log("Error:", error) )
 }
 
 const renderNewTag = (json) => {
   console.log(json)
+  const tagName = json.name
+  const tagId = json.id;
+  const noteId = "note" + json.notes[0].id;
+
+  const thisNoteDiv = document.getElementById(noteId)
+  const tagTemplate = `
+    <p class="publishedTag" id=${tagId}>
+      ${tagName}
+    </p>
+  `;
+  thisNoteDiv.innerHTML += tagTemplate;
 }
 
 document.addEventListener("click", addNewTagField)
