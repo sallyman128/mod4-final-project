@@ -17,7 +17,7 @@ const renderNotes = (notes) => {
     notes.forEach( (note) => {
       const {id, title, body, tags} = note;
       let bodyTemplate = `
-        <div name="note" id=${id}>
+        <div id=note${id}>
           <h3>
             Title: ${title} 
             <button id=${id} class="noteDeleteButton">Delete Note</button>
@@ -32,7 +32,6 @@ const renderNotes = (notes) => {
       notesContainerDiv.innerHTML += bodyTemplate;
       
       const thisNoteDiv = document.getElementById(`note${id}`)
-
       tags.forEach( (tag) => {
         let tagTemplate = `
           <p class="publishedTag" id=${tag.id}>
