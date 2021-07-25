@@ -155,6 +155,16 @@ document.addEventListener("dblclick", deleteTag)
 
 /****************Add a Tag to an existing Note********************/
 
+const addNewTag = (event) => {
+  if (event.target.className === "tagsAddButton") {
+    console.log(event.target);
+    
+  }
+}
+
+
+document.addEventListener("click", addNewTag)
+
 
 
 
