@@ -1,12 +1,10 @@
 class TagsController < ApplicationController
 
-  # def index
-  #   @tags = Tag.all
-  #   render :json => @tags
-  # end
-
   def create
-
+    tag = Tag.create(name: tag_params[:note]);
+    note = Note.find_by_id(tag_params[:note_id])
+    tag.notes << note
+    render json: tag, only: [:id, :name]
   end
 
   def destroy
@@ -16,7 +14,7 @@ class TagsController < ApplicationController
 
   private
   
-  # def tag_params
-
-  # end
+  def tag_params
+    params.require(:tag).permit(:name, :note_id)
+  end
 end

@@ -17,7 +17,7 @@ const renderNotes = (notes) => {
     notes.forEach( (note) => {
       const {id, title, body, tags} = note;
       let bodyTemplate = `
-        <div id=note${id}>
+        <div name="note" id=${id}>
           <h3>
             Title: ${title} 
             <button id=${id} class="noteDeleteButton">Delete Note</button>
@@ -89,7 +89,7 @@ const postNewNote = (data) => {
 // after the note has been persisted. It will be appended to the DOM.
 const renderNewNote = (json) => {
   template = `
-  <div>
+  <div name="note" id=${json.id}>
     <h3>
       Title: ${json.title} 
       <button id=${json.id} class="noteDeleteButton">Delete Note</button>
@@ -155,15 +155,55 @@ document.addEventListener("dblclick", deleteTag)
 
 /****************Add a Tag to an existing Note********************/
 
-const addNewTag = (event) => {
+const addNewTagField = (event) => {
   if (event.target.className === "tagsAddButton") {
-    console.log(event.target);
-    
+    const thisNoteHeader = event.target.parentElement
+    const newTagField = `
+      <input type="text" id="newTagName"/>
+      <button id="submitTag">Submit tag</button>
+      <button id="cancelSubmitTag">Cancel</button>
+    `
+    thisNoteHeader.innerHTML += newTagField;
+    document.removeEventListener("click", addNewTagField)
   }
 }
 
+const submitNewTag = (event) => {
+  if (event.target.id === "submitTag") {
+    const thisNoteId = event.target.parentElement.parentElement.id
+    const newTagName = document.getElementById("newTagName").value
+    const jsonToSend = {
+      tag: {
+        name: newTagName,
+        note_id: thisNoteId
+      }
+    };
+    postNewTag(jsonToSend);
+  }
+}
 
-document.addEventListener("click", addNewTag)
+const postNewTag = (data) => {
+  const configObj = {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      'Content-Type': "application/json"
+    },
+    body: JSON.stringify(data)
+  }
+  return fetch(`${baseUrl}/tags`, configObj)
+    .then( resp => resp.json() )
+    .then( (json) => console.log(json) )
+    .catch( error => console.log("Error:", error) )
+}
+
+const renderNewTag = (json) => {
+  console.log(json)
+}
+
+document.addEventListener("click", addNewTagField)
+document.addEventListener("click", submitNewTag)
+
 
 
 
