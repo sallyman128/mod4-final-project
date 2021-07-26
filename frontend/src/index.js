@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", getAllNotes)
 const submitNewNote = (event) => {
   event.preventDefault();
 
-  // get the data from form fields and prepare the json to send to backend
   let newNoteTitle = document.querySelector("#newNoteTitle").value;
   let newNoteBody = document.querySelector("#newNoteBody").value;
   const jsonToSend = {
@@ -38,15 +37,13 @@ const submitNewNote = (event) => {
       body: newNoteBody,
     }
   }
-  // set the form fields to empty
+
   document.querySelector("#newNoteTitle").value = "";
   document.querySelector("#newNoteBody").value = "";
 
-  // send the form data to the backend
   postNewNote(jsonToSend)
 }
 
-// persist new Note to the database
 const postNewNote = (data) => {
   const configObj = {
     method: "POST",
@@ -62,21 +59,9 @@ const postNewNote = (data) => {
     .catch( error => console.log("Error:", error) )
 }
 
-// after the note has been persisted. It will be appended to the DOM.
 const renderNewNote = (json) => {
-  template = `
-  <div name="note" id=${json.id}>
-    <h3>
-      Title: ${json.title} 
-      <button id=${json.id} class="noteDeleteButton">Delete Note</button>
-      <button id=${json.id} class="tagsAddButton">Add a tag</button>
-    </h3>
-    <span class="publishedNoteBody">
-      <p>${json.body}</p>
-    </span>
-  </div>
-  `;
-  notesContainerDiv.innerHTML += template;
+  const note = new Note(json)
+  note.appendToDiv("notesContainer")
 }
 
 const newNoteForm = document.getElementById("newNoteForm");
@@ -102,7 +87,6 @@ const deleteNote = (event) => {
     const noteElement = event.target.parentElement.parentElement
     noteElement.remove()
   }
-
 }
 
 document.addEventListener("click", deleteNote)
@@ -131,7 +115,7 @@ document.addEventListener("dblclick", deleteTag)
 
 /****************Add a Tag to an existing Note********************/
 
-const addNewTagField = (event) => {
+const addNewTagFields = (event) => {
   if (event.target.className === "tagsAddButton") {
     const thisNoteHeader = event.target.parentElement
     const newTagField = `
@@ -140,7 +124,7 @@ const addNewTagField = (event) => {
       <button id="cancelSubmitTag">Cancel</button>
     `
     thisNoteHeader.innerHTML += newTagField;
-    document.removeEventListener("click", addNewTagField)
+    document.removeEventListener("click", addNewTagFields)
   }
 }
 
@@ -160,7 +144,7 @@ const submitNewTag = (event) => {
     document.getElementById("submitTag").remove()
     document.getElementById("cancelSubmitTag").remove()
 
-    document.addEventListener("click", addNewTagField)
+    document.addEventListener("click", addNewTagFields)
 
     postNewTag(jsonToSend);
   }
@@ -182,21 +166,24 @@ const postNewTag = (data) => {
 }
 
 const renderNewTag = (json) => {
-  console.log(json)
-  const tagName = json.name
-  const tagId = json.id;
-  const noteId = "note" + json.note_id;
+  // const tagName = json.name
+  // const tagId = json.id;
+  // const noteId = "note" + json.note_id;
 
-  const thisNoteDiv = document.getElementById(noteId)
-  const tagTemplate = `
-    <p class="publishedTag" id=${tagId}>
-      ${tagName}
-    </p>
-  `;
-  thisNoteDiv.innerHTML += tagTemplate;
+  const tag = new Tag(json);
+
+  // const thisNoteDiv = document.getElementById(noteId)
+  // const thisNoteDiv = document.getElementById(`note${tag.noteId}`)
+  tag.appendToThisNoteDiv;
+  // const tagTemplate = `
+  //   <p class="publishedTag" id=${tagId}>
+  //     ${tagName}
+  //   </p>
+  // `;
+  // thisNoteDiv.innerHTML += tagTemplate;
 }
 
-document.addEventListener("click", addNewTagField)
+document.addEventListener("click", addNewTagFields)
 document.addEventListener("click", submitNewTag)
 
 /****************Cancel Adding Tag*************/
