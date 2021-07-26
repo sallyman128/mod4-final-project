@@ -7458,3 +7458,107 @@ Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 2.6ms | Allocations: 528
   [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ? /* loading for inspect */ LIMIT ?[0m  [["note_id", 1], ["LIMIT", 11]]
+Started GET "/notes" for ::1 at 2021-07-26 04:15:19 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 1]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 31.4ms | ActiveRecord: 2.8ms | Allocations: 17868)
+
+
+Started GET "/notes" for ::1 at 2021-07-26 04:17:05 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 1]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.9ms | Allocations: 5307)
+
+
+Started GET "/notes" for ::1 at 2021-07-26 04:17:08 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 1]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 1.1ms | Allocations: 5307)
+
+
+Started GET "/notes" for ::1 at 2021-07-26 04:17:30 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 1]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.9ms | Allocations: 5287)
+
+
+Started GET "/notes" for ::1 at 2021-07-26 04:17:55 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 1]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 1.3ms | Allocations: 5288)
+
+
+Started GET "/notes" for ::1 at 2021-07-26 04:20:20 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 1]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 2]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 3]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 4]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."note_id" = ?[0m  [["note_id", 5]]
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.9ms | Allocations: 5307)
+
+

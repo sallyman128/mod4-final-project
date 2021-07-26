@@ -3,6 +3,8 @@
 const baseUrl = 'http://localhost:3000';
 const notesContainerDiv = document.getElementById("notesContainer");
 
+// document.addEventListener("DOMContentLoaded", Note.displayAllNotes)
+
 
 const getAllNotes = () => {
   return fetch(`${baseUrl}/notes`)
@@ -16,6 +18,8 @@ const renderNotes = (notes) => {
     notesContainerDiv.innerHTML = "<h2>Published Notes</h2><i>Double click a tag to remove it.</i>"
     notes.forEach( (note) => {
       const {id, title, body, tags} = note;
+      // make Note object
+      debugger;
       let bodyTemplate = `
         <div id=note${id}>
           <h3>
@@ -223,7 +227,6 @@ document.addEventListener("click", addNewTagField)
 document.addEventListener("click", submitNewTag)
 
 
-// Todo: change db association. Make Tag belongs to Note.
 // Todo: implement some Object oriented design in JS
 // Review project requirements
 // Final: Add CSS
