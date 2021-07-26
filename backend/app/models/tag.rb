@@ -1,4 +1,4 @@
 class Tag < ApplicationRecord
-  has_many :tagNotes
-  has_many :notes, through: :tagNotes
+  # has_many :tagNotes
+  belongs_to :note
 end

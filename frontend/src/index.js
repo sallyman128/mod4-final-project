@@ -208,7 +208,7 @@ const renderNewTag = (json) => {
   console.log(json)
   const tagName = json.name
   const tagId = json.id;
-  const noteId = "note" + json.notes[0].id;
+  const noteId = "note" + json.note_id;
 
   const thisNoteDiv = document.getElementById(noteId)
   const tagTemplate = `
@@ -223,6 +223,9 @@ document.addEventListener("click", addNewTagField)
 document.addEventListener("click", submitNewTag)
 
 
-
+// Todo: change db association. Make Tag belongs to Note.
+// Todo: implement some Object oriented design in JS
+// Review project requirements
+// Final: Add CSS
 
 
