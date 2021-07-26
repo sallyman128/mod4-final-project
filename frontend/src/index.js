@@ -228,7 +228,17 @@ document.addEventListener("click", addNewTagField)
 document.addEventListener("click", submitNewTag)
 
 /****************Cancel Adding Tag*************/
+const cancelAddingTag = (event) => {
+  if (event.target.id === "cancelSubmitTag") {
+    document.getElementById("newTagName").remove()
+    document.getElementById("submitTag").remove()
+    document.getElementById("cancelSubmitTag").remove()
 
+    document.addEventListener("click", addNewTagField)
+  }
+}
+
+document.addEventListener("click", cancelAddingTag)
 
 // Todo: implement some Object oriented design in JS
 // Review project requirements
