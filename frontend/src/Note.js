@@ -6,29 +6,12 @@ class Note {
     this.body = noteJson.body;
     this.tags = noteJson.tags;
   }
+  
+  /*********************Append Note with Tags to DOM***************** */
 
-  static getAndDisplayAllNotes = () => {
-    return fetch("http://localhost:3000/notes")
-      .then( resp => resp.json() )
-      .then( notes => this.renderAllNotesWithTags(notes) )
-      .catch( error => console.log("Error:", error))
-  }
-
-  static renderAllNotesWithTags = (notes) => {
-    if (notes.length > 0) {
-      const notesContainerDiv = document.getElementById("notesContainer");
-      notesContainerDiv.innerHTML = "<h2>Published Notes</h2><i>Double click a tag to remove it.</i>"
-
-      notes.forEach( (note) => {
-        const thisNote = new Note(note)
-        thisNote.appendToDOM()
-      }) 
-    }
-  }
-
-  appendToDOM = () => {
-    const notesContainerDiv = document.getElementById("notesContainer");
-    let bodyTemplate = `
+  appendToDiv = (divID) => {
+    const notesContainerDiv = document.getElementById(divID);
+    let noteTemplate = `
       <div id=note${this.id}>
         <h3>
           Title: ${this.title} 
@@ -40,7 +23,7 @@ class Note {
         </span>
       </div>
     `;
-    notesContainerDiv.innerHTML += bodyTemplate;
+    notesContainerDiv.innerHTML += noteTemplate;
     const thisNoteDiv = document.getElementById(`note${this.id}`)
     this.tags.forEach( (tag) => {
       let tagTemplate = `

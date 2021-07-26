@@ -3,7 +3,26 @@
 const baseUrl = 'http://localhost:3000';
 const notesContainerDiv = document.getElementById("notesContainer");
 
-document.addEventListener("DOMContentLoaded", Note.getAndDisplayAllNotes)
+const getAllNotes = () => {
+  return fetch("http://localhost:3000/notes")
+    .then( resp => resp.json() )
+    .then( notes => renderAllNotesWithTags(notes) )
+    .catch( error => console.log("Error:", error))
+}
+
+const renderAllNotesWithTags = (notes) => {
+  if (notes.length > 0) {
+    const notesContainerDiv = document.getElementById("notesContainer");
+    notesContainerDiv.innerHTML = "<h2>Published Notes</h2><i>Double click a tag to remove it.</i>"
+
+    notes.forEach( (note) => {
+      const thisNote = new Note(note)
+      thisNote.appendToDiv("notesContainer")
+    }) 
+  }
+}
+
+document.addEventListener("DOMContentLoaded", getAllNotes)
 
 /**********************Form to create a new note****************************/
 
