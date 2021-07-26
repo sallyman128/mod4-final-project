@@ -3,54 +3,7 @@
 const baseUrl = 'http://localhost:3000';
 const notesContainerDiv = document.getElementById("notesContainer");
 
-const getAllNotes = () => {
-  return fetch(`${baseUrl}/notes`)
-    .then( resp => resp.json() )
-    .then( notes => renderNotesWithTags(notes) )
-    .catch( error => console.log("Error:", error))
-}
-
-// const getAndDisplayAllNotes = () => {
-//   Note.getAllNotes()
-// }
-
-const renderNotesWithTags = (notes) => {
-  if (notes.length > 0) {
-    notesContainerDiv.innerHTML = "<h2>Published Notes</h2><i>Double click a tag to remove it.</i>"
-    notes.forEach( (note) => {
-      const {id, title, body, tags} = note;
-      // make Note object
-      let bodyTemplate = `
-        <div id=note${id}>
-          <h3>
-            Title: ${title} 
-            <button id=${id} class="noteDeleteButton">Delete Note</button>
-            <button id=${id} class="tagsAddButton">Add a tag</button>
-          </h3>
-          <span class="publishedNoteBody">
-            <p>${body}</p>
-          </span>
-        </div>
-      `;
-
-      notesContainerDiv.innerHTML += bodyTemplate;
-      
-      const thisNoteDiv = document.getElementById(`note${id}`)
-      tags.forEach( (tag) => {
-        let tagTemplate = `
-          <p class="publishedTag" id=${tag.id}>
-            ${tag.name}
-          </p>
-        `;
-        thisNoteDiv.innerHTML += tagTemplate;
-      })
- 
-    }) 
-  }
-}
-
-document.addEventListener("DOMContentLoaded", getAllNotes)
-// document.addEventListener("DOMContentLoaded", getAndDisplayAllNotes)
+document.addEventListener("DOMContentLoaded", Note.getAndDisplayAllNotes)
 
 /**********************Form to create a new note****************************/
 
