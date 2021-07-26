@@ -3,23 +3,23 @@
 const baseUrl = 'http://localhost:3000';
 const notesContainerDiv = document.getElementById("notesContainer");
 
-// document.addEventListener("DOMContentLoaded", Note.displayAllNotes)
-
-
 const getAllNotes = () => {
   return fetch(`${baseUrl}/notes`)
     .then( resp => resp.json() )
-    .then( notes => renderNotes(notes) )
+    .then( notes => renderNotesWithTags(notes) )
     .catch( error => console.log("Error:", error))
 }
 
-const renderNotes = (notes) => {
+// const getAndDisplayAllNotes = () => {
+//   Note.getAllNotes()
+// }
+
+const renderNotesWithTags = (notes) => {
   if (notes.length > 0) {
     notesContainerDiv.innerHTML = "<h2>Published Notes</h2><i>Double click a tag to remove it.</i>"
     notes.forEach( (note) => {
       const {id, title, body, tags} = note;
       // make Note object
-      debugger;
       let bodyTemplate = `
         <div id=note${id}>
           <h3>
@@ -50,6 +50,7 @@ const renderNotes = (notes) => {
 }
 
 document.addEventListener("DOMContentLoaded", getAllNotes)
+// document.addEventListener("DOMContentLoaded", getAndDisplayAllNotes)
 
 /**********************Form to create a new note****************************/
 
@@ -225,6 +226,8 @@ const renderNewTag = (json) => {
 
 document.addEventListener("click", addNewTagField)
 document.addEventListener("click", submitNewTag)
+
+/****************Cancel Adding Tag*************/
 
 
 // Todo: implement some Object oriented design in JS
