@@ -25,7 +25,7 @@ class Note {
     `;
     notesContainerDiv.innerHTML += noteTemplate;
     const thisNoteDiv = document.getElementById(`note${this.id}`)
-    if (this.tags > 0 ) {
+    if (this.tags.length > 0) {
       this.tags.forEach( (tag) => {
         let tagTemplate = `
           <p class="publishedTag" id=${tag.id}>
