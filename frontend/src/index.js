@@ -1,10 +1,9 @@
 /*********************Append all Notes + Tags to DOM***************** */
 
 const baseUrl = 'http://localhost:3000';
-const notesContainerDiv = document.getElementById("notesContainer");
 
 const getAllNotes = () => {
-  return fetch("http://localhost:3000/notes")
+  return fetch(`${baseUrl}/notes`)
     .then( resp => resp.json() )
     .then( notes => renderAllNotesWithTags(notes) )
     .catch( error => console.log("Error:", error))

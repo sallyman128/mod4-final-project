@@ -1,6 +1,13 @@
 body {
-  font-family: "Times New Roman"
+  font-family: "Times New Roman";
+  background-color: lightblue;
 }
+
+h1,h2 {
+  text-align: center;
+}
+
+
 
 span.publishedNoteBody {
   text-indent: 50px;
