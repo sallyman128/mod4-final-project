@@ -166,27 +166,15 @@ const postNewTag = (data) => {
 }
 
 const renderNewTag = (json) => {
-  // const tagName = json.name
-  // const tagId = json.id;
-  // const noteId = "note" + json.note_id;
-
   const tag = new Tag(json);
-
-  // const thisNoteDiv = document.getElementById(noteId)
-  // const thisNoteDiv = document.getElementById(`note${tag.noteId}`)
-  tag.appendToThisNoteDiv;
-  // const tagTemplate = `
-  //   <p class="publishedTag" id=${tagId}>
-  //     ${tagName}
-  //   </p>
-  // `;
-  // thisNoteDiv.innerHTML += tagTemplate;
+  tag.appendToThisNoteDiv();
 }
 
 document.addEventListener("click", addNewTagFields)
 document.addEventListener("click", submitNewTag)
 
 /****************Cancel Adding Tag*************/
+
 const cancelAddingTag = (event) => {
   if (event.target.id === "cancelSubmitTag") {
     document.getElementById("newTagName").remove()
