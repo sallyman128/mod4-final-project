@@ -83,7 +83,6 @@ const deleteNote = (event) => {
     fetch(`${baseUrl}/notes/${note_id}`, configObj)
       .catch( error => console.log("Error:", error) )
     
-    // remove the deleted note from the DOM
     const noteElement = event.target.parentElement.parentElement
     noteElement.remove()
   }
@@ -107,7 +106,6 @@ const deleteTag = (event) => {
     fetch(`${baseUrl}/tags/${tag_id}`, configObj)
       .catch( error => console.log("Error:", error) )
     
-    // remove the deleted note from the DOM
     tagElement.remove()
   }
 }
@@ -187,7 +185,6 @@ const cancelAddingTag = (event) => {
 
 document.addEventListener("click", cancelAddingTag)
 
-// Todo: implement some Object oriented design in JS
 // Review project requirements
 // Final: Add CSS
 
