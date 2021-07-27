@@ -7,7 +7,19 @@ h1,h2 {
   text-align: center;
 }
 
+#newNoteForm {
+  text-align: center;
+}
 
+
+#newNoteBody, #newNoteTitle {
+  width: 50%;
+  font-family: Times, "Times New Roman";
+}
+
+i {
+  color: red;
+}
 
 span.publishedNoteBody {
   text-indent: 50px;
