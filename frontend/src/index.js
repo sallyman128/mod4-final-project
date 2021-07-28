@@ -178,13 +178,10 @@ const cancelAddingTag = (event) => {
     document.getElementById("submitTag").remove()
     document.getElementById("cancelSubmitTag").remove()
 
-    document.addEventListener("click", addNewTagField)
+    document.addEventListener("click", addNewTagFields)
   }
 }
 
 document.addEventListener("click", cancelAddingTag)
-
-// Review project requirements
-// Final: Add CSS
 
 
