@@ -127,6 +127,7 @@ const addNewTagFields = (event) => {
 
 const submitNewTag = (event) => {
   if (event.target.id === "submitTag") {
+    debugger;
     const thisNoteDivId = event.target.parentElement.parentElement.id;
     const thisNoteId = thisNoteDivId.split("").slice(4).join("");
     const newTagName = document.getElementById("newTagName").value

@@ -5,6 +5,7 @@ class Note {
     this.title = noteJson.title;
     this.body = noteJson.body;
     this.tags = noteJson.tags;
+    this.favorite = false;
   }
   
   /*********************Append Note with Tags to DOM***************** */
@@ -24,6 +25,7 @@ class Note {
       </div>
     `;
     notesContainerDiv.innerHTML += noteTemplate;
+
     const thisNoteDiv = document.getElementById(`note${this.id}`)
     if (this.tags.length > 0) {
       this.tags.forEach( (tag) => {
